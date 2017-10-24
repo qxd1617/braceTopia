@@ -1,0 +1,94 @@
+Assignment Report
+Assignment name is: Brace-topia
+
+My name is: 	Quan Dong
+My login ID is:	QXD1617
+
+[insert your answers after the question and add more lines as needed.]
+
+[PLEASE MAKE YOUR ANSWERS SHORT AND TO THE POINT. BULLET POINTS ARE GOOD.]
+
+============= PROGRAM STATUS ==============
+
+What is the status of the program?
+Does it: put an X inside the [] for your answer
+	[] crash?
+	[] infinite loop when it should not?
+	[] only work in printed mode?
+	[X] work fine?
+	[] only implement these options: [list them below]
+	[] other? Explain below.
+
+
+How does your move algorithm work? Describe briefly in English.
+
+1. Go through the 2d array city and calculate the happiness for all occupied city blocks.
+
+2. Allocate a list (using malloc) of structs of type Location, which contains a x/y coordinate in integer form. (referred to as vacancies list)
+
+3. Find all the blocks in the "city" that are vacant (not occupied by either n or e) and put their address in vacancies list..
+
+4. Shuffle the vacancies list so that the Locations are randomly sorted.
+
+5. Set initial index for vacancy list back to 0
+
+6. Go through the 2d array representation of the "city" and for every individual that is unhappy:
+
+	6a. Set the style of the address of the current indexed value of the vacancy list to the individual's style ('e' or 'n').
+
+	6b. Set the original style of the individual to '.'
+
+	6c. Increment vacancy index by 1
+	
+	6d. Increment total number of moves this turn by 1
+
+7. free() the vacancies list.
+	
+8. Return the total number of moves.
+
+
+
+============= SIMULATION ANALYSIS ==============
+
+What did you find most revealing about the simulation?
+
+Simulations with high vacancy percentages and preference strengths reach the highest happiness.
+
+However, higher vacancies lead to more iterations before maximum happiness is reached (although this can be fixed by a smarter move algorithm).
+
+
+
+============= GENERAL PROJECT FEEDBACK ==============
+
+What did I learn?
+
+Learned about malloc/free, how sometimes it's not necessarily needed and other times it is.
+
+Learned about how structures work with typedef.
+
+Learned about how different numerical types relate.
+
+
+
+What was easy about this assignment?
+
+Most of it I would say.
+
+
+
+What gave you problems or troubles?
+
+Nothing in particular. Maybe the part with getopt since the documentation was a little confusing.
+
+
+
+What should the instructor do to improve this assignment?
+
+Nothing
+
+
+What would you have liked to do in this assignment?
+
+Nothing
+
+
